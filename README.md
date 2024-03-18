@@ -5,11 +5,11 @@ It starts with the pre-processed R objects available on Zenodo under DOI 10.5281
 
 # System requirements
 ## OS requirements
-The containers were created and the analyses were run on Ubuntu 20.04 LTS. Systems that can run apptainer are required. See https://apptainer.org/docs/admin/main/installation.html#installation-on-windows-or-mac
+The containers were created and the analyses were run on Ubuntu 20.04 LTS. Systems that can run apptainer are recommended. Alternatively, systems that can run R 4.1.0 will suffice. For Apptainer compatible systems, see https://apptainer.org/docs/admin/main/installation.html#installation-on-windows-or-mac
 ## Software dependencies
-This code was run in R4.1.0 running in an apptainer container.
+This code was run in R4.1.0, with the list of packages provided below installed.
 
-The apptainer version was 1.0.2
+The R session was running in apptainer version 1.0.2.
 ## R packages required
 * Seurat
 * ggplot2
@@ -38,6 +38,8 @@ Once the container is created it can be edited with :
 sudo apptainer shell --writable r-sandbox
 
 Once inside the container, start a R session and install the R packages mentioned above like on any other system.
+## Alternative installation
+To run this R code without Apptainer, installing R 4.1.0 and the packages listed above will suffice. See https://cran.r-project.org/bin/
 ## Installation time
 Installation time can vary depending on the system. The installation of apptainer and the container can be completed in less than an hour.
 
