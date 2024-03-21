@@ -29,24 +29,19 @@ The R session was running in apptainer version 1.0.2.
 ## Apptainer installation
 The Apptainer container can be created on any system where Apptainer can be installed. To install apptainer, see : https://apptainer.org/docs/admin/main/installation.html
 ## Container creation
-The container can be created using the command :
+The container can be created by downloading the apptainer_creation.def file and using the command the command below in a linux terminal with apptainer installed:
 
-sudo apptainer build --sandbox r-sandbox docker://r-base:4.1.0
+sudo apptainer build apptainer_igp.sif apptainer_creation.def
 
-Once the container is created it can be edited with :
-
-sudo apptainer shell --writable r-sandbox
-
-Once inside the container, start a R session and install the R packages mentioned above like on any other system.
 ## Alternative installation
 To run this R code without Apptainer, installing R 4.1.0 and the packages listed above will suffice. See https://cran.r-project.org/bin/
 ## Installation time
-Installation time can vary depending on the system. The installation of apptainer and the container can be completed in less than an hour.
+Installation time can vary depending on the system. It typically lasts over an hour.
 
 # Demo
 To run the R scripts provided in this repository, start the container, change the working directory to the directory containing the scripts and load the configuration scripts:
 
-apptainer exec r-sandbox R
+apptainer exec apptainer_igp.sif R
 
 setwd("/mnt/iribhm/ngs/ST/article/R/")
 
