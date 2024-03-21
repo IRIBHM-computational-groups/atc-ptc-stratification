@@ -1,0 +1,28 @@
+Bootstrap:docker
+From:r-base:4.1.0
+
+%help
+This container contains R4.1.0 and the necessary R packages to reproduce the results of the article "Single nuclei and spatial transcriptomes suggest a stratification of papillary and anaplastic thyroid cancer cells"
+
+%environment
+export LC_ALL=C
+
+%post
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -y
+apt install -y curl libcurl4-openssl-dev libssl-dev libfontconfig1-dev libxml2-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev cmake
+Rscript -e 'install.packages("BiocManager")'
+Rscript -e 'install.packages("devtools")'
+Rscript -e 'install.packages("ggplot2")'
+Rscript -e 'devtools::install_github("btupper/catecolors")'
+Rscript -e 'install.packages("harmony")'
+Rscript -e 'install.packages("rentrez")'
+Rscript -e 'BiocManager::install("org.Hs.eg.db")'
+Rscript -e 'BiocManager::install("ComplexHeatmap")'
+Rscript -e 'install.packages("circlize")'
+Rscript -e 'install.packages("stringr")'
+Rscript -e 'BiocManager::install("BiocNeighbors")'
+Rscript -e 'devtools::install_github("sqjin/CellChat")'
+Rscript -e 'BiocManager::install("fgsea")'
+Rscript -e 'install.packages("msigdbr")'
+Rscript -e 'install.packages("Seurat")'
