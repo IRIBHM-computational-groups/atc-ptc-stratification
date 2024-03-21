@@ -29,7 +29,7 @@ The R session was running in apptainer version 1.0.2.
 ## Apptainer installation
 The Apptainer container can be created on any system where Apptainer can be installed. To install apptainer, see : https://apptainer.org/docs/admin/main/installation.html
 ## Container creation
-The container can be created by downloading the apptainer_creation.def file and using the command the command below in a linux terminal with apptainer installed:
+The container can be created by downloading the apptainer_creation.def file and using the command below in a terminal with apptainer installed:
 
 sudo apptainer build apptainer_igp.sif apptainer_creation.def
 
