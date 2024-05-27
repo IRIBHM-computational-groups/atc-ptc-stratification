@@ -4,7 +4,7 @@ md.setting <- 0.01
 dimensionality <- 1:30
 
 ## DIRECTORIES
-article.dir <- "/mnt/iribhm/ngs/ST/article/"
+article.dir <- "/mnt/iribhm/ngs/ST/article/" ## modify this path according to the starting directory you want to use
 output.dir <- paste0(article.dir, "output/")
 input.dir <- paste0(article.dir, "input/")
 fig.dir <- paste0(output.dir, "figures/")
