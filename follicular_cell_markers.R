@@ -1,4 +1,4 @@
-setwd("/mnt/iribhm/ngs/ST/article/R/")
+setwd(script.dir) ## Set working directory to the folder containing the scripts of this repository
 source("setup.R")
 source("constants.R")
 source("utils.R")
